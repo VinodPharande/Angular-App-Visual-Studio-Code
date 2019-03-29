@@ -1,0 +1,11 @@
+runtime: nodejs8
+env: flex
+api_version: 1
+threadsafe: true
+handlers:
+- url: / (.+)
+  static_files: dist/\l
+  upload: dist/ (.*)
+- url: /
+  static_files: dist/index.html
+  upload: dist/index.html
